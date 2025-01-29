@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainCraft.EFCore", "DomainCraft.EFCore\DomainCraft.EFCore.csproj", "{35B2B3A8-716E-41E0-96C4-7BD714C027CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainCraft.RedisCaching", "DomainCraft.RedisCaching\DomainCraft.RedisCaching.csproj", "{1EAA8014-1B22-4040-B061-4B5CB00C0393}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{35B2B3A8-716E-41E0-96C4-7BD714C027CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35B2B3A8-716E-41E0-96C4-7BD714C027CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35B2B3A8-716E-41E0-96C4-7BD714C027CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EAA8014-1B22-4040-B061-4B5CB00C0393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EAA8014-1B22-4040-B061-4B5CB00C0393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EAA8014-1B22-4040-B061-4B5CB00C0393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EAA8014-1B22-4040-B061-4B5CB00C0393}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
