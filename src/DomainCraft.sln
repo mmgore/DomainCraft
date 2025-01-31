@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainCraft.RedisCaching", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainCraft.LoggingMiddleware", "DomainCraft.LoggingMiddleware\DomainCraft.LoggingMiddleware.csproj", "{ACA0BD7B-79AD-4E13-8BA7-8753D63D376D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainCraft.EventBus", "DomainCraft.EventBus\DomainCraft.EventBus.csproj", "{EFB55CAE-0C72-40AE-9D05-0DF83B5EB440}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{ACA0BD7B-79AD-4E13-8BA7-8753D63D376D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACA0BD7B-79AD-4E13-8BA7-8753D63D376D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACA0BD7B-79AD-4E13-8BA7-8753D63D376D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFB55CAE-0C72-40AE-9D05-0DF83B5EB440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFB55CAE-0C72-40AE-9D05-0DF83B5EB440}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFB55CAE-0C72-40AE-9D05-0DF83B5EB440}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFB55CAE-0C72-40AE-9D05-0DF83B5EB440}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
