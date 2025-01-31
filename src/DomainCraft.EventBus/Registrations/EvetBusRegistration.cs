@@ -8,7 +8,7 @@ namespace DomainCraft.EventBus.Registrations;
 
 public static class EvetBusRegistration
 {
-    public static IServiceCollection AddEventBus(
+    public static IServiceCollection AddDomainCraftEventBus(
         this IServiceCollection services,
         Action<RabbitMqOptions> configureRabbitMq,
         Action<RetryOptions> configureRetry,
