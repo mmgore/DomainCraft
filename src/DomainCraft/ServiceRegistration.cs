@@ -3,6 +3,7 @@ using DomainCraft.EventBus.Registrations;
 using DomainCraft.LoggingMiddleware.Registration;
 using DomainCraft.Options;
 using DomainCraft.RedisCaching.Registration;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -16,7 +17,7 @@ public static class ServiceRegistration
         options?.Invoke(opts);
 
         if (opts.UseEFCore)
-            services.AddDomainCraftRepositories();
+            services.AddDomainCraftRepositories<DbContext>();
 
         if (opts.UseCaching)
             services.AddDomainCraftCaching(opts.ConfigureCache);

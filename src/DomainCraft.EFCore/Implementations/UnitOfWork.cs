@@ -6,13 +6,13 @@ using Microsoft.EntityFrameworkCore.Storage;
 
 namespace DomainCraft.EFCore.Implementations;
 
-public class UnitOfWork : IUnitOfWork
+public class UnitOfWork<TContex> : IUnitOfWork where TContex : DbContext
     {
-        private readonly DbContext _context;
+        private readonly TContex _context;
         private readonly Hashtable _repositories;
         private IDbContextTransaction? _currentTransaction;
 
-        public UnitOfWork(DbContext context)
+        public UnitOfWork(TContex context)
         {
             _context = context;
             _repositories = new Hashtable();
