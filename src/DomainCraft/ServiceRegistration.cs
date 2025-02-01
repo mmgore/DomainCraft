@@ -11,18 +11,19 @@ namespace DomainCraft;
 
 public static class ServiceRegistration
 {
-    public static IServiceCollection AddDomainCraft(this IServiceCollection services, IConfiguration configuration, Action<DomainCraftOptions>? options = null)
+    public static IServiceCollection AddDomainCraft<TContext>(this IServiceCollection services, IConfiguration configuration, Action<DomainCraftOptions>? options = null)
+    where TContext : DbContext
     {
         var opts = new DomainCraftOptions { Configuration = configuration };
         options?.Invoke(opts);
 
-        if (opts.UseEFCore)
-            services.AddDomainCraftRepositories<DbContext>();
+        if (opts.UseEFCoreRepositories)
+            services.AddDomainCraftRepositories<TContext>();
 
-        if (opts.UseCaching)
+        if (opts is { UseCaching: true, ConfigureCache: not null })
             services.AddDomainCraftCaching(opts.ConfigureCache);
 
-        if (opts.UseEventBus)
+        if (opts is { UseEventBus: true, ConfigureRabbitMq: not null, ConfigureRetry: not null, ConfigureCircuitBreaker: not null })
             services.AddDomainCraftEventBus(opts.ConfigureRabbitMq,opts.ConfigureRetry,opts.ConfigureCircuitBreaker);
 
         if (opts.UseLogging)
@@ -30,5 +31,4 @@ public static class ServiceRegistration
 
         return services;
     }
-
 }

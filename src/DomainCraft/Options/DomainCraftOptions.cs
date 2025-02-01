@@ -6,10 +6,10 @@ namespace DomainCraft.Options;
 
 public class DomainCraftOptions
 {
-    public bool UseEFCore { get; set; } = true;
-    public bool UseCaching { get; set; } = true;
-    public bool UseEventBus { get; set; } = true;
-    public bool UseLogging { get; set; } = true;
+    public bool UseEFCoreRepositories { get; set; } = false;
+    public bool UseCaching { get; set; } = false;
+    public bool UseEventBus { get; set; } = false;
+    public bool UseLogging { get; set; } = false;
 
     public IConfiguration? Configuration { get; set; }
     public Action<CacheOptions>? ConfigureCache { get; set; }
