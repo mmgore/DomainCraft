@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\DomainCraft.EFCore\DomainCraft.EFCore.csproj" />
+      <ProjectReference Include="..\DomainCraft.EventBus\DomainCraft.EventBus.csproj" />
+      <ProjectReference Include="..\DomainCraft.LoggingMiddleware\DomainCraft.LoggingMiddleware.csproj" />
+      <ProjectReference Include="..\DomainCraft.RedisCaching\DomainCraft.RedisCaching.csproj" />
+    </ItemGroup>
+
+</Project>

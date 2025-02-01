@@ -5,7 +5,7 @@ using Serilog;
 using Serilog.Exceptions;
 using Serilog.Sinks.Elasticsearch;
 
-namespace DomainCraft.LoggingMiddleware.DependencyInjection;
+namespace DomainCraft.LoggingMiddleware.Registration;
 
 public static class SerilogRegistration
 {

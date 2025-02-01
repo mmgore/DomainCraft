@@ -3,11 +3,11 @@ using DomainCraft.RedisCaching.Implementations;
 using Microsoft.Extensions.DependencyInjection;
 using StackExchange.Redis;
 
-namespace DomainCraft.RedisCaching.DependencyInjection;
+namespace DomainCraft.RedisCaching.Registration;
 
 public static class CacheRegistration
 {
-    public static IServiceCollection AddDomainCraftCache(this IServiceCollection services,
+    public static IServiceCollection AddDomainCraftCaching(this IServiceCollection services,
         Action<CacheOptions> configureOptions)
     {
         var options = new CacheOptions();
